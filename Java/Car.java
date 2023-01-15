@@ -4,11 +4,13 @@ class Car {
     Integer id;
     String license;
     Account driver;
-    Integer passegenger;
+    private Integer passegenger;
 
     public Car (String lincense, Account driver) {
         this.license = license;
         this.driver = driver;
+        passegenger = 4; 
+        System.out.print("passenger: " + passegenger);
     }
 
     void printDataCar() {
