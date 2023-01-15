@@ -1,13 +1,28 @@
+# A class is a blueprint for creating objects (a particular data structure), providing initial values
+# for state (member variables or attributes), and implementations of behavior (member functions or
+# methods).
 #Polimorfismo
-#rueda tiene diferentes valores y mismo nombre en metodo
-class Auto:
-    rueda = 4
-    def desplazamiento(self):
-        print('el auto se esta desplazando sobre 4 ruedas')
+
+# Se crea la clase padre que es Animales, se crean 2 subclases de Leon y perro y despues ya podemos crear diferentes animales 
+# a partir de leon y perro
+class Animales:
+    def __init__(self, name):
+        self.name = name
+    def tipo_animal(self):
+        pass
+
+class Leon(Animales):
+    def tipo_animal(self):
+        print('animal salvaje')
+
+class Perro(Animales):
+    def tipo_animal(self):
+        print('animal domestico')
+
+nuevo_animal = Leon('SIMBA')
+nuevo_animal.tipo_animal()
 
 
-# A Moto is a thing that has two wheels and can move.
-class Moto:
-    rueda = 2
-    def desplazamiento(self):
-        print('la moto se esta desplazando sobre 2 ruedas')
+nuevo_animal2 = Perro('Docko')
+nuevo_animal2.tipo_animal()
+
